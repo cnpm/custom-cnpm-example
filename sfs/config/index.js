@@ -18,7 +18,22 @@ var sfsConfig = {
 var config = {
   enableCluster: true,
   sfsConfig: sfsConfig,
-  nfs: require('sfs-client').create(sfsConfig)
+  nfs: require('sfs-client').create(sfsConfig),
+  database: {
+    db: 'cnpmjs_test',
+    username: 'root',
+    password: '',
+    dialect: 'mysql',
+    host: '127.0.0.1',
+    port: 3306,
+    pool: {
+      maxConnections: 10,
+      minConnections: 0,
+      maxIdleTime: 30000
+    },
+    logging: !!process.env.SQL_DEBUG,
+  },
+  syncModel: 'exist'
 };
 
 // load config/config.js, everything in config.js will cover the same key in index.js
