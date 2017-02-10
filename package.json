@@ -8,12 +8,18 @@
     "mkdirp": "~0.5.0",
     "qn-cnpm": "~1.0.0",
     "sfs": "~0.1.0",
-    "sfs-client": "~0.1.0"
+    "sfs-client": "~0.1.0",
+    "snyk": "^1.25.0"
   },
   "devDependencies": {
     "autod": "~0.3.2"
   },
   "engine": {
     "node": ">=0.11.9"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
