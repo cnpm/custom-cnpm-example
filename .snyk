@@ -1,0 +1,14 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:mime:20170907':
+    - sfs-client > formstream > mime:
+        patched: '2018-06-29T04:01:44.854Z'
+    - sfs > formstream > mime:
+        patched: '2018-06-29T04:01:44.854Z'
+    - sfs > connect > send > mime:
+        patched: '2018-06-29T04:01:44.854Z'
+    - cnpmjs.org > nodemailer > mailcomposer > mime:
+        patched: '2018-06-29T04:01:44.854Z'
